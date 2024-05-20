@@ -17,8 +17,6 @@
     "paths": {
       "@nba-players-list/frontend": ["libs/frontend/src/index.ts"],
       "@nba-players-list/shared": ["libs/shared/src/index.ts"],
-      "@nba-players-list/test": ["libs/test/src/index.ts"],
-      "@nba-players-list/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
