@@ -1,3 +1,22 @@
+# Installation
+
+1) Clone the repository
+
+`git clone https://github.com/NikolasSzwargot/nba-players-list.git`
+
+2) install the dependencies using Yarn inside the project directory :)
+
+`yarn install`
+
+# Running the application
+
+`yarn start`
+
+It should run on http://localhost:4200 !
+
+Enjoy!
+
+
 # NbaPlayersList
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
