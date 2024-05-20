@@ -14,7 +14,7 @@ export function Table({headerLabels, rowsValues}: TableProps) {
         <TableHeader headerLabels={headerLabels} />
       </thead>
       <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
-      {rowsValues.map((row) => <TableRow rowValues={row} />)}
+      {rowsValues.map((row, index) => <TableRow key={index} index={index} rowValues={row} />)}
       </tbody>
     </table>
   );

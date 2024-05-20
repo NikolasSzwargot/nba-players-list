@@ -7,8 +7,8 @@ export interface TableHeaderProps {
 
 export function TableHeader({headerLabels}: TableHeaderProps) {
   return (
-    <tr>
-      {headerLabels.map((label) => <Cell value={label} isHeader={true}/>)}
+    <tr className="bg-red-700 text-white">
+      {headerLabels.map((label, index) => <Cell key={index} value={label} isHeader={true}/>)}
     </tr>
   );
 }

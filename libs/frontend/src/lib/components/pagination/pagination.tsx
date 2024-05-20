@@ -12,12 +12,14 @@ export function Pagination({recordsPerPage, totalRecords, paginate}: PaginationP
 
   return (
       <nav>
-        <ul className="flex flex-row mt-4 ml-4">
+        <ul className="flex flex-row mt-4 justify-end mr-1">
           {pageNumbers.map((pageNumber) => (
             <li key={pageNumber} className="pr-5">
-              <a href="#" onClick={() => paginate(pageNumber)}>
+              <button onClick={() => paginate(pageNumber)}
+              className="px-3 py-1 mr-1 text-stone-600 bg-white border border-stone-600 rounded-md
+              hover:bg-stone-600 hover:text-white focus:outline-none focus:bg-stone-600 focus:text-white">
                 {pageNumber}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

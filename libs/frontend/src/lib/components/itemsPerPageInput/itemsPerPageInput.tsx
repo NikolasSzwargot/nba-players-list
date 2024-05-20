@@ -18,10 +18,11 @@ export function ItemsPerPageInput({setItemsPerPage, itemsPerPage, highBoundary, 
     setItemsPerPage(Number(event.target.value));
   }
   return (
-      <div className="flex flex-row">
-        <p>Show</p>
-        <select id="entriesPerPage" name="entriesPerPage" className="select-auto ml-3 w-11" value={itemsPerPage} onChange={onSelectChangeHandler}>
-          {options.map((value) => <option value={value} >{value}</option>)}
+      <div className="flex items-center justify-between bg-stone-100 p-2 rounded-md shadow-md">
+        <p className="mr-2">Show</p>
+        <select id="entriesPerPage" name="entriesPerPage" className="select-auto px-2 py-1 border rounded shadow-sm
+        focus:outline-none focus:ring-stone-400" value={itemsPerPage} onChange={onSelectChangeHandler}>
+          {options.map((value, index) => <option value={value} key={index} >{value}</option>)}
         </select>
         <p className="ml-2">Entries:</p>
       </div>

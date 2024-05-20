@@ -28,15 +28,23 @@ export function App() {
           .map((objVal) => objVal || '-'))
 
   return (
-    <Card classes="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-2xl font-bold mb-4">NBA players</h1>
-      <ItemsPerPageInput setItemsPerPage={setPlayersPerPage} itemsPerPage={playersPerPage}
-                         highBoundary={50} lowBoundary={10} step={10}/>
-      <SearchBox onSearchChange={setSearchedText} paginate={paginate}
-                 searchedText={searchedText}/>
-      {<Table headerLabels={headerLabels} rowsValues={rowValues} />}
-      <Pagination recordsPerPage={playersPerPage} totalRecords={filteredData.length} paginate={paginate}/>
-    </Card>
+    <div className="bg-blue-200 min-h-screen">
+      <Card classes="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-full
+      max-h-full w-full h-full flex flex-col shadow-sm bg-blue-200 border border-b-0 font-sans overflow-auto">
+        <h1 className="text-4xl font-bold text-center text-white
+        bg-blue-600 p-4 mb-2 rounded-tl-lg rounded-tr-lg shadow-md">NBA Players</h1>
+        <Card classes="flex flex-row justify-end mt-4" >
+          <SearchBox onSearchChange={setSearchedText} paginate={paginate}
+                  searchedText={searchedText}/>
+        </Card>
+        {<Table headerLabels={headerLabels} rowsValues={rowValues} />}
+        <Card classes="flex flex-row justify-between items-center mt-4" >
+          <ItemsPerPageInput setItemsPerPage={setPlayersPerPage} itemsPerPage={playersPerPage}
+                          highBoundary={50} lowBoundary={10} step={10}/>
+          <Pagination recordsPerPage={playersPerPage} totalRecords={filteredData.length} paginate={paginate}/>
+        </Card>
+      </Card>
+    </div>
   );
 }
 
