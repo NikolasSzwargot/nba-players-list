@@ -14,7 +14,7 @@ export function SearchBox({onSearchChange, paginate, searchedText}: SearchBoxPro
 
   return (
     <>
-      <div className="flex items-center space-x-2 p-2 bg-stone-100 rounded shadow-md border border-b">
+      <div className="flex items-center space-x-2 p-2 bg-stone-100 rounded shadow-md border border-b mb-3">
         <label htmlFor="seach-box" className="text-gray-700">Search: </label>
         <input type="text" name="search-box" value={searchedText} onChange={onSearchChangeHandler}
         className="p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-stone-400"
